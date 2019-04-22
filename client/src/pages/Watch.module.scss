@@ -1,0 +1,41 @@
+@import "../config";
+
+.container {
+    display: grid;
+
+    padding: 0 2em;
+
+    grid-template-areas:
+        "videoTitle commentsTitle"
+        "video comments";
+
+    grid-template-columns: 1.68fr 1fr;
+    grid-column-gap: 1em;
+}
+
+.videoTitle {
+    grid-area: videoTitle;
+
+    padding: 1em;
+}
+
+.commentsTitle {
+    grid-area: commentsTitle;
+
+    margin: 0;
+    padding: 1rem;
+
+    font-family: $font-family;
+    font-weight: normal;
+    font-size: $header-size;
+}
+
+.comments {
+    grid-area: comments;
+}
+
+.video {
+    grid-area: video;
+
+    width: 100%;
+}
