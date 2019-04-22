@@ -12,7 +12,7 @@ export interface DescribedVideoProps {
 export default function DescribedVideo(props: PropsWithChildren<DescribedVideoProps>) {
     return (
         <div className={classnames(props.className, style.description)}>
-            <Video source={props.source} />
+            <Video source={props.source} className={style.video} />
             <div>{props.children}</div>
         </div>
     )
