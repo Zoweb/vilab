@@ -10,7 +10,10 @@
         "video comments";
 
     grid-template-columns: 1.68fr 1fr;
+    grid-template-rows: 4em auto;
     grid-column-gap: 1em;
+
+    height: 100vh;
 }
 
 .videoTitle {
@@ -32,10 +35,32 @@
 
 .comments {
     grid-area: comments;
+    width: 100%;
+    overflow-y: auto;
+
 }
 
 .video {
     grid-area: video;
-
     width: 100%;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 817px) {
+    .container {
+        grid-template-areas: "videoTitle" "video" "commentsTitle" "comments";
+        grid-template-columns: 1fr;
+    }
+
+    .commentsTitle::before {
+        content: "";
+        display: block;
+
+        width: 90%;
+        height: 1px;
+
+        margin: 1em 1em 1em 5%;
+
+        background: black;
+    }
 }
